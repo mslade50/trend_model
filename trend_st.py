@@ -87,7 +87,10 @@ def create_plotly_table(df, ticker):
                                     rsi_percentile_colors.apply(lambda x: x[1]), ema_percentile_colors.apply(lambda x: x[1])], size=12),
                    align='left'))
     ])
-    fig.update_layout(title=f"{ticker}")
+    fig.update_layout(
+        title=f"{ticker} Stock Data",
+        title_font=dict(size=36)  # Increase font size here
+    )
     return fig
 
 def main():
