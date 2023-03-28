@@ -99,7 +99,7 @@ def main():
     for ticker in tickers:
         df = process_stock_data(ticker)
         table_figure = create_plotly_table(df, ticker)
-        st.plotly_chart(table_figure,use_container_width=False,width=600)
+        st.plotly_chart(table_figure,use_container_width=False,width=300)
 
 if __name__ == '__main__':
     main()
