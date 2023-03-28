@@ -67,7 +67,7 @@ def create_plotly_table(df, ticker):
     df = df.sort_index(ascending=False)
 
     fig = go.Figure(data=[go.Table(
-        columnwidth=[70, 80, 150, 150, 150, 150, 150],
+        columnwidth=[50, 55, 55, 60, 60, 60, 60],
         header=dict(values=['Date', 'Price_vs_200_d', 'Price_vs_200_w', '200_day_MA_slope', '200_week_MA_slope',
                             '14_day_RSI_pctile', '21_vs_200_pctile'],
                     fill_color='darkblue',
@@ -87,12 +87,12 @@ def create_plotly_table(df, ticker):
                                     rsi_percentile_colors.apply(lambda x: x[1]), ema_percentile_colors.apply(lambda x: x[1])], size=12),
                    align='left'))
     ])
-    fig.update_layout(title=f"{ticker} Stock Data")
+    fig.update_layout(title=f"{ticker}")
     return fig
 
 def main():
     st.set_page_config(layout="wide")
-    st.title("Stock Technical Indicators")
+    st.title("Trend Dashboards")
     tickers = ['^GSPC', '^NDX','GC=F','CL=F','NG=F','SI=F','ZW=F','RB=F','ZN=F','ZT=F',
     'DX-Y.NYB','USDJPY=X','EURUSD=X','AUDUSD=X','BTC-USD','ETH-USD']
     
