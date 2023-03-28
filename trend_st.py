@@ -88,7 +88,7 @@ def create_plotly_table(df, ticker):
                    align='left'))
     ])
     fig.update_layout(
-        title=f"{ticker} Stock Data",
+        title=f"{ticker}",
         title_font=dict(size=36)  # Increase font size here
     )
     return fig
