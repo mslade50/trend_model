@@ -67,7 +67,7 @@ def create_plotly_table(df, ticker):
     df = df.sort_index(ascending=False)
 
     fig = go.Figure(data=[go.Table(
-        columnwidth=[200, 265, 265, 260, 260, 260, 250],
+        columnwidth=[120, 150, 150, 150, 150, 150, 150],
         header=dict(values=['Date', 'Price_vs_200_d', 'Price_vs_200_w', '200_day_MA_slope', '200_week_MA_slope',
                             '14_day_RSI_pctile', '21_vs_200_pctile'],
                     fill_color='darkblue',
