@@ -67,11 +67,11 @@ def create_plotly_table(df, ticker):
     df = df.sort_index(ascending=False)
 
     fig = go.Figure(data=[go.Table(
-        columnwidth=[120, 150, 150, 150, 150, 150, 150],
+        columnwidth=[70, 80, 150, 150, 150, 150, 150],
         header=dict(values=['Date', 'Price_vs_200_d', 'Price_vs_200_w', '200_day_MA_slope', '200_week_MA_slope',
                             '14_day_RSI_pctile', '21_vs_200_pctile'],
                     fill_color='darkblue',
-                    font=dict(color='white', size=11),
+                    font=dict(color='white', size=12),
                     align='left'),
         cells=dict(values=[df.index.strftime('%Y-%m-%d'), df['Price_vs_200_d'], df['Price_vs_200_w'],
                            df['200_day_MA_slope'], df['200_week_MA_slope'], df['14_day_RSI_pctile'], df['21_vs_200_pctile']],
