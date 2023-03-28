@@ -91,6 +91,7 @@ def create_plotly_table(df, ticker):
     return fig
 
 def main():
+    st.set_page_config(layout="wide")
     st.title("Stock Technical Indicators")
     tickers = ['^GSPC', '^NDX','GC=F','CL=F','NG=F','SI=F','ZW=F','RB=F','ZN=F','ZT=F',
     'DX-Y.NYB','USDJPY=X','EURUSD=X','AUDUSD=X','BTC-USD','ETH-USD']
